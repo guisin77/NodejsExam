@@ -54,9 +54,10 @@ app.put('/user/:id', function(req,res){
 		res.send(JSON.stringify({result:false}));
 	} else {
 		
+		var id = req.params.id;
 		var name = req.body.name;
 		var age  = Number(req.body.age);
-		var obj =  Number(req.body.id);
+		var obj = {id:id ,  name:name , age:age }
 		users[select_index] = obj ;
 		res.send(JSON.stringify({result:true ,
 			                        api:'modify user info'  }));
