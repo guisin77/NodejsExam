@@ -4,7 +4,14 @@ var bodyParser = require('body-parser');
 var app = express();
 app.use(bodyParser.urlencoded({extended:false}))
 
+// cross domain issue ///////////////////////////
+var cors = require('cors')();
+app.use(cors);
+
 var mysql = require('mysql');
+
+
+/////////////////////////////////////////////////
 
 /////////////////////////////////////////////////
 var connection = mysql.createConnection({
