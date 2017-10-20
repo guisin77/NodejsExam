@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>API Spec</title>
+</head>
+<body>
+	<table border="1" width="600">
+		<tr>
+			<td width="200">
+				1. Sound List API
+				<BR>GET /sound/list
+			</td>
+			<td>
+				<form method="GET" action="/sound/list">
+					<input type="submit" name="">
+				</form>
+			</td>
+		</tr>
+
+		<tr>
+			<td width="200">
+				2. Sound Download
+				<BR>GET /sound/#id
+			</td>
+			<td>
+				<form method="GET" action="/sound/4">
+					<input type="submit" name="">
+				</form>
+			</td>
+		</tr>
+
+			
+
+		<tr>
+			<td>
+				3. Sound  Upload API
+				<BR>POST /sound/upload
+			</td>
+			<td>
+				<form method="POST" action="/sound" enctype="multipart/form-data">
+					
+					<li>Sound info : <input type="text" name="sound_info">  
+					<li>Sound file  : <input type="file" name="sound">
+						
+					<br><input type="submit" value="Send">
+				</form>
+			</td>
+		</tr>
+
+		<tr>
+			<td width="200">
+				4. Sound delete
+				<BR>DELETE /sound/#id
+			</td>
+			<td>
+				<form method="DELETE" action="/sound/4">
+					<input type="submit" name="">
+				</form>
+			</td>
+		</tr>	
+
+	</table>
+</body>
+</html>
